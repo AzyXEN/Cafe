@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Контакты — Cloude Moner</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="mainmenu">
+    <div class="container">
+      <header>
+        <img src="logo.png" alt="Логотип" id="log">
+        <nav>
+          <a href="index.html">Главная</a>
+          <a href="menu.html">Меню</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="contacti">
+          <h1>Список контактов для обратной связи</h1>
+          <address class="adr">
+            <ul>
+              <li>Телеграмм: <a id="tg" href="https://t.me/xenazyxen" target="_blank" rel="noopener">TG</a></li>
+              <li>Ватсап: <a id="wts" href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li>Город Киев, ул. Большая Васильковская, 118</li>
+            </ul>
+          </address>
+        </section>
+
+        <section class="soc">
+          <h2>Наши социальные сети</h2>
+          <ul>
+            <li><a href="https://instagram.com" class="btn" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://facebook.com" class="btn" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://x.com" class="btn" target="_blank" rel="noopener">Twitter (X)</a></li>
+          </ul>
+        </section>
+
+        <!-- Секция лайв-чата поддержки -->
+        <section class="chat-section">
+          <h2>Онлайн-поддержка</h2>
+          <p>Остались вопросы по брони или меню? Напишите нашему администратору в чат.</p>
+
+          <!-- Кнопка для открытия чата -->
+          <button type="button" id="open-chat-btn" class="btn">Открыть чат с администратором</button>
+
+          <!-- Само окно чата -->
+          <div id="chat-window" class="chat-hidden">
+            <div class="chat-header">
+              <span>Чат с поддержкой</span>
+              <button type="button" id="close-chat-btn">&times;</button>
+            </div>
+            <div class="chat-body" id="chat-body">
+              <p class="chat-message support">Здравствуйте! Чем мы можем помочь?</p>
+            </div>
+            <div class="chat-footer">
+              <input type="text" id="chat-input" placeholder="Введите сообщение...">
+              <button type="button" id="send-msg-btn">Отправить</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 Cloude Moner</p>
+        <div class="priem">
+          Время приема гостей: 10:00-21:00
+          <a href="https://pravovadopomoga.com.ua/?utm_source=pd&utm_medium=cpc&utm_content=791763926630&utm_term=захист%20прав%20споживачів%20в%20україні&gad_source=1&gad_campaignid=23440539599&gclid=Cj0KCQiAnsvXBhCqARIsAHKgGNYfMDHelIBQLMGQZ2Yraw2JsdrsheXnKTgorhIDTdh8yLKt3DH_PwMaAgk_EALw_wcB">Защита прав потребителя</a>
+        </div>
+      </footer>
+    </div>
+    <script src="cafe.js"></script>
+  </body>
+</html>

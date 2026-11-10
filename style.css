@@ -1,0 +1,378 @@
+/* ==========================================
+   1. ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ И СБРОС СТИЛЕЙ
+   ========================================== */
+:root {
+  --bg-color: #262114;
+  --text-color: #f0e6d2;
+  --accent-color: #d4af37;
+  --font-main: 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  font-style: italic;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==========================================
+   2. ШАПКА И НАВИГАЦИЯ (HEADER & NAV)
+   ========================================== */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 10px 0;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+/* Главное название заведения на самом верху */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрирует абсолютно всё по горизонтали */
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--accent-color);
+  gap: 20px; /* Красивые отступы между этажами */
+}
+
+/* Название ресторана (самый верх) */
+header h1 {
+  color: var(--accent-color);
+  font-size: 48px;
+}
+
+/* Контейнер для логотипа и меню превращаем тоже в колонку по центру */
+#glav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Отступ между логотипом и навигацией */
+}
+
+/* Логотип по центру */
+#log {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Навигация ровно под логотипом */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+nav a {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 6px;
+  font-size: 16px;
+  white-space: nowrap; /* Гарантирует, что текст не перенесется */
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #262114;
+  background-color: var(--accent-color);
+}
+
+/* ==========================================
+   3. ТИПОГРАФИКА И ОБЩИЕ ЭЛЕМЕНТЫ
+   ========================================== */
+h2 {
+  color: var(--accent-color);
+  font-size: 28px;
+  margin: 20px 0 10px 0;
+}
+
+p {
+  color: #c0b8a6;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 8px 0;
+}
+
+/* Картинки внутри контента */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* ==========================================
+   4. ГЛАВНЫЙ БАННЕР (#mainmenu)
+   ========================================== */
+#mainmenu {
+  background-image: url("https://images.pexels.com/photos/37492267/pexels-photo-37492267.jpeg?cs=srgb&dl=pexels-cihad-yildiz-2160041419-37492267.jpg&fm=jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: inset 0 0 0 2000px rgba(38, 33, 20, 0.65); /* Затемнение фона для читаемости текста */
+}
+
+/* ==========================================
+   5. КНОПКИ И ЦЕННИКИ
+   ========================================== */
+button, .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: #262114;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button:hover, .btn:hover {
+  background-color: #fff;
+  color: #262114;
+}
+
+.cena {
+  color: #ff5555;
+  font-weight: bold;
+}
+
+.eda {
+  color: #a09886;
+  font-size: 14px;
+}
+
+/* ==========================================
+   6. ПОДВАЛ (FOOTER)
+   ========================================== */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  border-top: 1px solid var(--accent-color);
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: var(--accent-color);
+  margin-left: 10px;
+}
+.menu-card{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: rgba(38, 33, 20, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+  transition: all 0.3s ease; /*свойство плавного перехода*/
+}
+.menu-card img{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+.card-header{
+  display: flex;
+  justify-content: space-between; /* которое растолкнет заголовок h3 и цену .cena по противоположным краям.*/
+  align-items: center; /*чтобы они стояли ровно по одной горизонтальной оси.*/
+}
+.card-content{
+  font-size: 14px;
+  color: #a09886;
+}
+.card-header h3{
+  color: gold;
+}
+.menu-card:hover{
+  border-color: var(--accent-color); /* цвет рамки меняется на золотистый*/
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2); /*золотистая тень*/
+}
+.contacts-container{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: rgba(38, 33, 20, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+  transition: all 0.3s ease; /*свойство плавного перехода*/
+}
+input, textarea, select{
+  box-shadow: inset 0 0 0 2000px rgba(38, 33, 20, 0.65);
+  background-color: rgba(38, 33, 20, 0.6);
+  color: #a09886;
+  border-radius: 10px;
+  border: 1px solid gold;
+}
+input:focus, textarea:focus, select:focus{
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+.contacti, .soc,{
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: rgba(38, 33, 20, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 10px;
+  transition: all 0.3s ease; /*свойство плавного перехода*/
+}
+
+
+#tg, #wts{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: #262114;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+#tg:hover, #wts:hover{
+  background-color: #fff;
+  color: #262114;
+}
+/* ==========================================
+   ЛАЙВ-ЧАТ (СТИЛИ)
+   ========================================== */
+.chat-section {
+  margin: 30px 0;
+  position: relative;
+}
+
+#chat-window {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(38, 33, 20, 0.95);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.chat-hidden {
+  display: none !important;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: rgba(212, 175, 55, 0.1);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+#close-chat-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+#close-chat-btn:hover {
+  color: var(--accent-color);
+}
+
+.chat-body {
+  padding: 15px;
+  height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+.chat-message.support {
+  background-color: rgba(212, 175, 55, 0.15);
+  color: var(--text-color);
+  align-self: flex-start;
+  border-left: 3px solid var(--accent-color);
+}
+
+.chat-message.user {
+  background-color: var(--accent-color);
+  color: #262114;
+  align-self: flex-end;
+  font-weight: bold;
+}
+
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  gap: 8px;
+  background-color: rgba(38, 33, 20, 0.8);
+}
+
+#chat-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  background-color: rgba(38, 33, 20, 0.6);
+  color: var(--text-color);
+  outline: none;
+}
+
+#chat-input:focus {
+  border-color: #fff;
+}
+
+#send-msg-btn {
+  padding: 8px 15px;
+  background-color: var(--accent-color);
+  color: #262114;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#send-msg-btn:hover {
+  background-color: #fff;
+}

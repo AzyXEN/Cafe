@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cloude Moner</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="mainmenu">
+    <div class="container">
+
+      <!-- Шапка сайта -->
+      <header>
+        <!-- Название ресторана теперь на самом верху по центру -->
+        <h1>Cloude Moner</h1>
+
+        <!-- Контейнер для логотипа (слева) и меню (справа) -->
+        <div id="glav">
+          <img src="logo.png" alt="Логотип" id="log">
+          <nav>
+            <a href="index.html">Главная</a>
+            <a href="menu.html">Меню</a>
+            <a href="contacts.html">Контакты</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <!-- Приветственный блок под шапкой -->
+        <section style="text-align: center; margin: 40px 0;">
+          <p style="font-size: 20px; color: var(--text-color);">Рады видеть Вас в нашем заведении!</p>
+          <p style="font-size: 18px; margin-bottom: 20px;">Если вы здесь, то у вас определенно имеется вкус</p>
+          <a href="menu.html" class="btn">Перейти к меню</a>
+        </section>
+
+        <section>
+          <h2>О нас</h2>
+          <p>Специализируемся на утолении чувства голода французской кухней</p>
+          <p>Идея открытия возникла у создателя в далеком 1888 году в провинции Шампань</p>
+          <p>Наша команда - это наша семья</p>
+        </section>
+
+        <section>
+          <h3>Фирменное блюдо шефа: Каре шестимесячного олененка под ежевичным соусом</h3>
+          <p>Идея и само блюдо зародилось во время того как наш шеф покорял далекие леса Новой Зеландии и был лишен провианта</p>
+          <p>Данное блюдо прекрасно в себе сочетает дикость природы и домашнее тепло перед камином</p>
+
+          <form class="forma" action="index.html" method="post" style="margin-top: 20px;">
+            <p><input type="text" placeholder="Введите имя" style="padding: 8px; width: 100%; max-width: 300px; border-radius: 4px; border: none;"></p>
+            <p><input type="email" placeholder="Введите email" style="padding: 8px; width: 100%; max-width: 300px; border-radius: 4px; border: none;"></p>
+            <p>
+              <select style="padding: 8px; width: 100%; max-width: 300px; border-radius: 4px; border: none;">
+                <option>Узнать наличие свободных столиков</option>
+                <option>Бронь зала для мероприятия</option>
+                <option>Предложения, идеи, критика</option>
+              </select>
+            </p>
+            <p>
+              <textarea placeholder="Введите что-то" maxlength="50" style="padding: 8px; width: 100%; max-width: 300px; height: 80px; border-radius: 4px; border: none;">Форма для обратной связи</textarea>
+            </p>
+            <button type="submit" name="button">Отправить</button>
+          </form>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2026 Cloude Moner</p>
+        <div class="priem">
+          Время приема гостей: 10:00-21:00
+          <a href="https://pravovadopomoga.com.ua/?utm_source=pd&utm_medium=cpc&utm_content=791763926630&utm_term=захист%20прав%20споживачів%20в%20україні&gad_source=1&gad_campaignid=23440539599&gclid=Cj0KCQiAnsvXBhCqARIsAHKgGNYfMDHelIBQLMGQZ2Yraw2JsdrsheXnKTgorhIDTdh8yLKt3DH_PwMaAgk_EALw_wcB">Защита прав потребителя</a>
+        </div>
+      </footer>
+    </div>
+    <script src="cafe.js"></script>
+  </body>
+</html>
